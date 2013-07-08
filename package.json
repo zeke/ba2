@@ -2,6 +2,7 @@
   "name": "poesis",
   "version": "0.0.1",
   "dependencies": {
+    "express": "~3.3.3"
   },
   "devDependencies": {
     "grunt": "~0.4.1",

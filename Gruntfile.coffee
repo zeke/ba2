@@ -3,10 +3,10 @@ module.exports = (grunt) ->
   grunt.initConfig
 
     compass:
-      dist:
+      public:
         options:
           sassDir: 'src/styles'
-          cssDir: 'dist/styles'
+          cssDir: 'public/styles'
           outputStyle: 'compact'
           relativeAssets: true
           colorOutput: false
@@ -17,12 +17,12 @@ module.exports = (grunt) ->
           bare: false
           join: true
         files:
-          'dist/scripts/index.js': ['src/scripts/**/*.coffee']
+          'public/scripts/index.js': ['src/scripts/**/*.coffee']
 
     # uglify:
-    #   dist:
+    #   public:
     #     files:
-    #       'dist/scripts/.min.js': ['src/input1.js', 'src/input2.js']
+    #       'public/scripts/.min.js': ['src/input1.js', 'src/input2.js']
 
     watch:
       coffee:

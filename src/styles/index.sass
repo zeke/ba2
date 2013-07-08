@@ -1,0 +1,164 @@
+@import "media-queries"
+@import "mixins"
+
+$background_color: #333
+$text_color: #999
+$image_border_color: #000
+$link_color: #666
+$link_hover_color: #999
+
+$slide_num_padding: 10px
+$slide_num_font_size: 18px
+$slide_num_label_color: #BBB
+
+$desktop_slide_padding: 30px
+$desktop_heading_size: 80px
+$desktop_text_size: 32px
+
+$mobile_slide_padding: 20px
+$mobile_heading_size: 32px
+$mobile_text_size: 18px
+
+$page_counter_color: orange
+$elapsis_color: #999
+
+*
+  -moz-box-sizing: border-box
+  -webkit-box-sizing: border-box
+  box-sizing: border-box
+
+body
+  +fonty
+  margin: 0
+  padding: 0
+  background: $background_color
+
+hgroup
+  +centered
+  background: transparent url(../images/beaverbrook_logo.png) no-repeat center top
+  padding-top: 90px
+  +mobile-only
+    +not_centered
+    margin: 80px 0
+
+  h1, h2
+    text-align: center
+
+  h1
+    margin: 0
+    padding: 0
+
+  h2
+    color: $text_color
+    font-size: 18px
+    margin: 0
+    padding: 0
+
+h3.tip
+  +centered_bottom
+  font-size: 16px
+  font-weight: normal
+  color: $text_color
+  margin: 0
+  padding: 0
+  +mobile-only
+    display: none
+
+ol#slides
+  counter-reset: slideNum
+  margin: 0
+  padding: 0
+  list-style: none
+
+  > li
+    counter-increment: slideNum
+    margin: 0
+    padding: 0
+    height: 100%
+    width: 100%
+    position: relative
+    +mobile-only
+      width: auto
+      height: auto
+
+    // slide number label
+    &:after
+      content: counter(slideNum)
+      position: absolute
+      top: $slide_num_padding
+      right: $slide_num_padding
+      display: "block"
+      font-size: $slide_num_font_size
+      color: $slide_num_label_color
+      display: none
+
+
+    > h1
+      +centered_left
+      max-width: 700px
+      font-size: $desktop_heading_size
+      margin: 0
+      padding: 0 0 0 $desktop_slide_padding
+      +mobile-only
+        +not_centered
+        font-size: $mobile_heading_size
+        padding: 60px $mobile_slide_padding 0 $mobile_slide_padding
+
+    figure
+      width: 100%
+      height: 100%
+      margin: 0
+      padding: 0
+      +mobile-only
+        width: auto
+        height: auto
+
+      a
+        color: $image_border_color
+      img
+        +centered_right($desktop_slide_padding)
+        max-height: 80%
+        max-width: 50%
+        border: 10px solid $image_border_color
+        &.borderless
+          border-color: transparent
+        +mobile-only
+          +not_centered
+          +max_scale(100%)
+          border: none
+
+      figcaption
+        color: $text_color
+        font-weight: bold
+        font-size: $desktop_text_size
+        max-width: 40%
+        +centered_left($desktop_slide_padding)
+        +mobile-only
+          +not_centered
+          max-width: none
+          font-size: $mobile_text_size
+          padding: $mobile_slide_padding
+
+        a
+          color: $link_color
+          text-decoration: none
+          &:hover
+            color: $link_hover_color
+            text-decoration: underline
+
+
+#page_counter
+  position: fixed
+  top: 0
+  left: 0
+  width: 0
+  height: 6px
+  background: $page_counter_color
+
+#elapsis
+  position: fixed
+  top: 6px
+  left: 0
+  width: 0
+  height: 5px
+  background: $elapsis_color

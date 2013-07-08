@@ -1,0 +1,48 @@
+=fonty
+  font-family: "Helvetica Neue", helvetica, arial
+
+=centered
+  position: absolute
+  top: 50%
+  left: 50%
+  -webkit-transform: translate(-50%, -50%)
+  transform: translate(-50%, -50%)
+
+=centered_left($padding:0px)
+  position: absolute
+  top: 50%
+  left: $padding
+  -webkit-transform: translate(0, -50%)
+  transform: translate(0, -50%)
+
+=centered_right($padding:0px)
+  position: absolute
+  top: 50%
+  right: $padding
+  -webkit-transform: translate(0, -50%)
+  transform: translate(0, -50%)
+
+=centered_bottom($padding:0px)
+  position: absolute
+  bottom: $padding
+  left: 50%
+  -webkit-transform: translate(-50%, -100%)
+  transform: translate(-50%, -100%)
+
+=not_centered
+  position: relative
+  left: 0
+  top: 0
+  -webkit-transform: translate(0, 0)
+  transform: translate(0, 0)
+
+=transition($duration)
+  -webkit-transition: all $duration
+  -moz-transition: all $duration
+  -ms-transition: all $duration
+  -o-transition: all $duration
+  transition: all $duration
+
+=max_scale($scale:100%)
+  max-width: $scale
+  max-height: $scale

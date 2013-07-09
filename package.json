@@ -6,10 +6,9 @@
   },
   "devDependencies": {
     "grunt": "~0.4.1",
-    "grunt-s3": "~0.2.0-alpha.1",
-    "grunt-contrib-coffee": "*",
-    "grunt-contrib-compass": "*",
+    "grunt-contrib-coffee": "~0.7.0",
+    "grunt-contrib-compass": "~0.3.0",
     "grunt-contrib-uglify": "~0.2.2",
-    "grunt-contrib-watch": "*"
+    "grunt-contrib-watch": "~0.4.4"
   }
 }

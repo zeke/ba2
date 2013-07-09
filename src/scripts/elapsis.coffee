@@ -1,11 +1,11 @@
 class Elapsis
 
-  constructor: (@dom_id, @scaled_property='width', @duration=3000) ->
+  constructor: (@dom_id='elapsis', @scaled_property='width', @duration=3000) ->
 
     # Create DOM element
     @el = document.createElement('div')
     @el.setAttribute('id', @dom_id)
-    @el.setAttribute('class', 'elapsis')
+    @el.setAttribute('class', @dom_id)
     document.body.appendChild(@el)
 
     properties = {}

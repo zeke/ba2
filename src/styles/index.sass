@@ -1,15 +1,15 @@
 @import "media-queries"
 @import "mixins"
 
-$background_color: #333
-$text_color: #999
-$image_border_color: #000
-$link_color: #666
-$link_hover_color: #999
+$background-color: #1A1B23
+$text-color: #FFF
+$image_border-color: #FFF
+$link-color: #C6C7E4
+$link_hover-color: #FFF
 
 $slide_num_padding: 10px
 $slide_num_font_size: 18px
-$slide_num_label_color: #BBB
+$slide_num_label-color: #BBB
 
 $desktop_slide_padding: 30px
 $desktop_heading_size: 80px
@@ -19,8 +19,8 @@ $mobile_slide_padding: 20px
 $mobile_heading_size: 32px
 $mobile_text_size: 18px
 
-$page_counter_color: orange
-$elapsis_color: #999
+$scroll-fever-color: rgba(38, 43, 75, 1)
+$elapsis-color: rgba(38, 43, 75, 0.5)
 
 *
   -moz-box-sizing: border-box
@@ -31,38 +31,11 @@ body
   +fonty
   margin: 0
   padding: 0
-  background: $background_color
+  background: $background-color
+  color: $text-color
 
-hgroup
-  +centered
-  background: transparent url(../images/beaverbrook_logo.png) no-repeat center top
-  padding-top: 90px
-  +mobile-only
-    +not_centered
-    margin: 80px 0
-
-  h1, h2
-    text-align: center
-
-  h1
-    margin: 0
-    padding: 0
-
-  h2
-    color: $text_color
-    font-size: 18px
-    margin: 0
-    padding: 0
-
-h3.tip
-  +centered_bottom
-  font-size: 16px
+h1,h2,h3,h4,h5,h6
   font-weight: normal
-  color: $text_color
-  margin: 0
-  padding: 0
-  +mobile-only
-    display: none
 
 ol#slides
   counter-reset: slideNum
@@ -89,9 +62,8 @@ ol#slides
       right: $slide_num_padding
       display: "block"
       font-size: $slide_num_font_size
-      color: $slide_num_label_color
+      color: $slide_num_label-color
       display: none
-
 
     > h1
       +centered_left
@@ -114,12 +86,12 @@ ol#slides
         height: auto
 
       a
-        color: $image_border_color
+        color: $image_border-color
       img
         +centered_right($desktop_slide_padding)
         max-height: 80%
         max-width: 50%
-        border: 10px solid $image_border_color
+        border: 10px solid $image_border-color
         &.borderless
           border-color: transparent
         +mobile-only
@@ -128,8 +100,8 @@ ol#slides
           border: none
 
       figcaption
-        color: $text_color
-        font-weight: bold
+        color: $text-color
+        font-weight: normal
         font-size: $desktop_text_size
         max-width: 40%
         +centered_left($desktop_slide_padding)
@@ -140,20 +112,20 @@ ol#slides
           padding: $mobile_slide_padding
 
         a
-          color: $link_color
+          color: $link-color
           text-decoration: none
           &:hover
-            color: $link_hover_color
+            color: $link_hover-color
             text-decoration: underline
 
 
-#page_counter
+#scroll-fever
   position: fixed
   top: 0
   left: 0
   width: 0
   height: 6px
-  background: $page_counter_color
+  background: $scroll-fever-color
 
 #elapsis
   position: fixed
@@ -161,4 +133,4 @@ ol#slides
   left: 0
   width: 0
   height: 5px
-  background: $elapsis_color
+  background: $elapsis-color

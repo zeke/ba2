@@ -5,11 +5,30 @@
 <script src='scripts/jquery-2.0.1.min.js'></script>
 <script src="scripts/index.js"></script>
 
+<script src='//use.typekit.net/lpc2yow.js'></script>
+<script>try{Typekit.load();}catch(e){}</script>
+
 <ol id="slides">
+
+  <li>
+    <h1>What are Buildpacks?</h1>
+  </li>
+
+
+  <li>
+    <h1>Platformization</h1>
+  </li>
+
+  <li>
+    Machete design
+    Create a single, general-purpose tool which is simple to understand but can be applied to many problems. It's like the product version of occam's razor. <a href="https://gist.github.com/adamwiggins/5687294">Adam Wiggins</a>
+  </li>
 
   <li>
   <figure>
     <figcaption>
+      https://devcenter.heroku.com/articles/slug-compiler
+
       When you `git push heroku`, Heroku’s slug compiler prepares your code for execution by the Heroku manager. At the heart of the slug compiler is a collection of scripts called a [buildpack](https://devcenter.heroku.com/articles/buildpacks).
     </figcaption>
   </figure>
@@ -18,7 +37,7 @@
   <li>
   <figure>
     <figcaption>
-      dotjs ~/.js github fork viewer
+      dotjs is a Google Chrome extension that executes JavaScript files in ~/.js based on their filename. If you navigate to http://www.google.com/, dotjs will execute ~/.js/google.com.js.
     </figcaption>
   </figure>
   </li>
@@ -32,9 +51,35 @@
   </li>
 
   <li>
+    small core / big userland is good, but then you start to think the core could be smaller...
+    https://twitter.com/dominictarr/status/335309056174592000
+  </li>
+
+  <li>
     <figure>
       <figcaption>
         npm install hooks are an antipattern.
+
+        - You can depend on coffee-script as a devDependency, and thus your users don't need to have it installed.
+        - You don't need to include the minifiers in your package, reducing the size for your users.
+        - You don't need to rely on your users having curl or wget or other system tools on the target machines.
+      </figcaption>
+    </figure>
+  </li>
+
+  <li>
+    <h1>Analysis Paralysis</h1>
+    http://en.wikipedia.org/wiki/Anti-pattern
+    http://en.wikipedia.org/wiki/Analysis_paralysis
+    http://en.wikipedia.org/wiki/The_Fox_and_the_Cat_(fable)
+  </li>
+
+
+  <li>
+    <figure>
+      <figcaption>
+        Customers cannot tell you what they need ...The richest vein for tech startups is creating the product that you want to use—that’s what Steve and Woz did.
+        <a href="http://blog.guykawasaki.com/2011/10/what-i-learned-from-steve-jobs.html">Guy Kawasaki</a>
       </figcaption>
     </figure>
   </li>
@@ -42,13 +87,21 @@
   <li>
     <figure>
       <figcaption>
-        Customers cannot tell you what they need. – Guy Kawasaki
-
+        by releasing small modules, you leave open the question of their larger utility. they may yet solve problems that you have not dreamt of -
+        <a href="https://twitter.com/isntitvacant/status/339091631414317057">@isntitvacant</a>
       </figcaption>
     </figure>
   </li>
 
-</ol>
+  <li>
+    bike shed, design by committee, wax philoshophical
+  </li>
 
-<div id="elapsis"></div>
-<div id="page_counter"></div>
+  <li>
+    https://docs.google.com/a/heroku.com/document/d/1XlREDOyg-98VEtfw6Q5hs1RNvhEXkY7621PDVgqRTR8/edit
+    https://docs.google.com/a/heroku.com/document/d/1Unyib5AP_s6eNZqhEdvHxdYuE3SsmVuyJj815nyLQXA/edit
+
+    http://xseignard.github.io/2013/02/18/use-bower-with-heroku/
+  </li>
+
+</ol>

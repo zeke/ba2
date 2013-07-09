@@ -9,6 +9,7 @@
     "grunt-contrib-coffee": "~0.7.0",
     "grunt-contrib-compass": "~0.3.0",
     "grunt-contrib-uglify": "~0.2.2",
-    "grunt-contrib-watch": "~0.4.4"
+    "grunt-contrib-watch": "~0.4.4",
+    "grunt-browserify": "~1.2.0"
   }
 }

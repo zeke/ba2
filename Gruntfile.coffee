@@ -17,7 +17,12 @@ module.exports = (grunt) ->
           bare: false
           join: true
         files:
-          'public/scripts/index.js': ['src/scripts/**/*.coffee']
+          'public/scripts/index-pre-browserify.js': ['src/scripts/**/*.coffee']
+
+    browserify:
+      basic:
+        src: ['public/scripts/index-pre-browserify.js']
+        dest: 'public/scripts/index.js'
 
     # uglify:
     #   public:
@@ -32,10 +37,11 @@ module.exports = (grunt) ->
         files: ['src/styles/*.sass']
         tasks: ['compass']
 
+  grunt.loadNpmTasks 'grunt-browserify'
   grunt.loadNpmTasks 'grunt-contrib-coffee'
   grunt.loadNpmTasks 'grunt-contrib-compass'
   grunt.loadNpmTasks 'grunt-contrib-watch'
   # grunt.loadNpmTasks 'grunt-contrib-uglify'
 
-  grunt.registerTask 'default', ['compass', 'coffee']
+  grunt.registerTask 'default', ['compass', 'coffee', 'browserify']
   # grunt.registerTask 'build', ['coffee', 'concat', 'uglify', 'cssmin']

@@ -1,26 +1,30 @@
 @import "media-queries"
 @import "mixins"
 
-$background-color: #1A1B23
-$text-color: #FFF
-$image_border-color: #FFF
-$link-color: #C6C7E4
-$link_hover-color: #FFF
+// Colors
 
-$slide_num_padding: 10px
-$slide_num_font_size: 18px
-$slide_num_label-color: #BBB
+$background-color: #FFF
+$text-color: #6B6E88
+$heading-color: #543683
+$link-color: #543683
+$link-hover-color: $link-color
+$code-color: black
 
-$desktop_slide_padding: 30px
-$desktop_heading_size: 80px
-$desktop_text_size: 32px
+// Layout
 
-$mobile_slide_padding: 20px
-$mobile_heading_size: 32px
-$mobile_text_size: 18px
+$slide-num-padding: 10px
+$slide-num-font-size: 18px
+$slide-num-label-color: #BBB
 
-$scroll-fever-color: rgba(38, 43, 75, 1)
-$elapsis-color: rgba(38, 43, 75, 0.5)
+$desktop-slide-padding: 30px
+$desktop-heading-size: 100px
+$desktop-text-size: 48px
+
+$mobile-slide-padding: 20px
+$mobile-heading-size: 32px
+$mobile-text-size: 18px
+
+// Styles
 
 *
   -moz-box-sizing: border-box
@@ -28,14 +32,18 @@ $elapsis-color: rgba(38, 43, 75, 0.5)
   box-sizing: border-box
 
 body
-  +fonty
+  +base-font-stack
   margin: 0
   padding: 0
   background: $background-color
   color: $text-color
 
 h1,h2,h3,h4,h5,h6
-  font-weight: normal
+  font-weight: bold
+  color: $heading-color
+  a
+    text-decoration: none
+    color: $heading-color
 
 ol#slides
   counter-reset: slideNum
@@ -58,23 +66,30 @@ ol#slides
     &:after
       content: counter(slideNum)
       position: absolute
-      top: $slide_num_padding
-      right: $slide_num_padding
+      top: $slide-num-padding
+      right: $slide-num-padding
       display: "block"
-      font-size: $slide_num_font_size
-      color: $slide_num_label-color
+      font-size: $slide-num-font-size
+      color: $slide-num-label-color
       display: none
 
     > h1
-      +centered_left
+      +centered-left
       max-width: 700px
-      font-size: $desktop_heading_size
+      font-size: $desktop-heading-size
       margin: 0
-      padding: 0 0 0 $desktop_slide_padding
+      padding: 0 0 0 $desktop-slide-padding
       +mobile-only
-        +not_centered
-        font-size: $mobile_heading_size
-        padding: 60px $mobile_slide_padding 0 $mobile_slide_padding
+        +not-centered
+        font-size: $mobile-heading-size
+        padding: $mobile-slide-padding
+
+    &.titular
+      background: $heading-color
+      > h1
+        color: $background-color
+        a
+          color: $background-color
 
     figure
       width: 100%
@@ -85,52 +100,67 @@ ol#slides
         width: auto
         height: auto
 
-      a
-        color: $image_border-color
       img
-        +centered_right($desktop_slide_padding)
+        +centered-right($desktop-slide-padding)
         max-height: 80%
         max-width: 50%
-        border: 10px solid $image_border-color
-        &.borderless
-          border-color: transparent
+        &.fullscreen
+          +centered
+          max-width: 100%
+          max-height: 100%
+
         +mobile-only
-          +not_centered
+          +not-centered
           +max_scale(100%)
-          border: none
 
       figcaption
         color: $text-color
-        font-weight: normal
-        font-size: $desktop_text_size
-        max-width: 40%
-        +centered_left($desktop_slide_padding)
+        font-weight: bold
+        font-size: $desktop-text-size
+        max-width: 50%
+        +centered-left($desktop-slide-padding)
+        &.fullscreen
+          max-width: 80%
         +mobile-only
-          +not_centered
+          +not-centered
           max-width: none
-          font-size: $mobile_text_size
-          padding: $mobile_slide_padding
+          font-size: $mobile-text-size
+          padding: $mobile-slide-padding
+
+        code
+          color: $code-color
+          +code-font-stack
+          font-weight: bold
 
         a
           color: $link-color
-          text-decoration: none
+          text-decoration: underline
           &:hover
-            color: $link_hover-color
+            color: $link-hover-color
             text-decoration: underline
 
+
+
+$scroll-fever-height: 5px
+$scroll-fever-color: rgba($link-color, 0.5)
+
+$elapsis-height: 5px
+$elapsis-color: rgba($link-color, 0.3)
 
 #scroll-fever
   position: fixed
   top: 0
   left: 0
   width: 0
-  height: 6px
+  height: $scroll-fever-height
   background: $scroll-fever-color
+  +hidden-unless-active
 
 #elapsis
   position: fixed
-  top: 6px
+  top: $scroll-fever-height
   left: 0
   width: 0
-  height: 5px
+  height: $elapsis-height
   background: $elapsis-color
+  +hidden-unless-active

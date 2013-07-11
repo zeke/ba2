@@ -1,4 +1,4 @@
-class Carousel
+class @Carousel
 
   constructor: (@selector) ->
 
@@ -31,8 +31,3 @@ class Carousel
   animate: ->
     $("html, body").animate
       scrollTop: window.innerHeight*@offset
-
-    @updatePageCounter()
-
-
-window.Carousel = Carousel

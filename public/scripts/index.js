@@ -1,8 +1,8 @@
 (function() {
-  var Carousel, Elapsis,
+  var Elapsis,
     __bind = function(fn, me){ return function(){ return fn.apply(me, arguments); }; };
 
-  Carousel = (function() {
+  this.Carousel = (function() {
     function Carousel(selector) {
       var _this = this;
       this.selector = selector;
@@ -43,17 +43,14 @@
     };
 
     Carousel.prototype.animate = function() {
-      $("html, body").animate({
+      return $("html, body").animate({
         scrollTop: window.innerHeight * this.offset
       });
-      return this.updatePageCounter();
     };
 
     return Carousel;
 
   })();
-
-  window.Carousel = Carousel;
 
   Elapsis = (function() {
     function Elapsis(dom_id, scaled_property, duration) {
@@ -78,8 +75,14 @@
 
   $(function() {
     window.carousel = new Carousel('#slides');
-    window.elapsis = new Elapsis('elapsis', 'width', 2 * 60 * 1000);
-    return window.scrollFever = new ScrollFever();
+    window.elapsis = new Elapsis('elapsis', 'width', 25 * 60 * 1000);
+    window.scrollFever = new ScrollFever();
+    return $('body').on('keydown keyup', function(event) {
+      var _ref;
+      if ((_ref = event.keyCode) === 16) {
+        return $('#elapsis, #scroll-fever').toggleClass('active');
+      }
+    });
   });
 
   this.ScrollFever = (function() {

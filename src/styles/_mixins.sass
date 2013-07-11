@@ -1,5 +1,8 @@
-=fonty
-  font-family: "proxima-nova", "Helvetica Neue", helvetica, arial
+=base-font-stack
+  font-family: "Helvetica Neue", helvetica, arial
+
+=code-font-stack
+  font-family: Courier,monospace
 
 =centered
   position: absolute
@@ -8,28 +11,28 @@
   -webkit-transform: translate(-50%, -50%)
   transform: translate(-50%, -50%)
 
-=centered_left($padding:0px)
+=centered-left($padding:0px)
   position: absolute
   top: 50%
   left: $padding
   -webkit-transform: translate(0, -50%)
   transform: translate(0, -50%)
 
-=centered_right($padding:0px)
+=centered-right($padding:0px)
   position: absolute
   top: 50%
   right: $padding
   -webkit-transform: translate(0, -50%)
   transform: translate(0, -50%)
 
-=centered_bottom($padding:0px)
+=centered-bottom($padding:0px)
   position: absolute
   bottom: $padding
   left: 50%
   -webkit-transform: translate(-50%, -100%)
   transform: translate(-50%, -100%)
 
-=not_centered
+=not-centered
   position: relative
   left: 0
   top: 0
@@ -46,3 +49,9 @@
 =max_scale($scale:100%)
   max-width: $scale
   max-height: $scale
+
+=hidden-unless-active
+  opacity: 0
+  transition: all 1s
+  &.active
+    opacity: 1

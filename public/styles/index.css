@@ -2,7 +2,7 @@
 * { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 
 /* line 34, ../../src/styles/index.sass */
-body { font-family: "Helvetica Neue", helvetica, arial; margin: 0; padding: 0; background: white; color: #6b6e88; }
+body { font-family: "Helvetica Neue", helvetica, arial; margin: 0; padding: 0; background: white; color: #555555; }
 
 /* line 41, ../../src/styles/index.sass */
 h1, h2, h3, h4, h5, h6 { font-weight: bold; color: #543683; }
@@ -42,9 +42,9 @@ ol#slides > li figure img.full-width { position: absolute; top: 50%; left: 50%; 
 @media (max-width: 480px) { /* line 106, ../../src/styles/index.sass */
   ol#slides > li figure img { position: relative; left: 0; top: 0; -webkit-transform: translate(0, 0); transform: translate(0, 0); max-width: 100%; max-height: 100%; } }
 /* line 124, ../../src/styles/index.sass */
-ol#slides > li figure figcaption { color: #6b6e88; font-weight: bold; font-size: 48px; max-width: 50%; position: absolute; top: 50%; left: 30px; -webkit-transform: translate(0, -50%); transform: translate(0, -50%); overflow: hidden; }
+ol#slides > li figure figcaption { color: #555555; font-weight: bold; font-size: 52px; max-width: 50%; position: absolute; top: 50%; left: 30px; -webkit-transform: translate(0, -50%); transform: translate(0, -50%); overflow: hidden; }
 /* line 131, ../../src/styles/index.sass */
-ol#slides > li figure figcaption strong { color: #3e404f; }
+ol#slides > li figure figcaption strong { color: #222222; }
 /* line 133, ../../src/styles/index.sass */
 ol#slides > li figure figcaption.fullscreen { max-width: 80%; }
 @media (max-width: 480px) { /* line 124, ../../src/styles/index.sass */

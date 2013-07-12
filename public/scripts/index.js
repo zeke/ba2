@@ -77,7 +77,7 @@
     window.carousel = new Carousel('#slides');
     window.elapsis = new Elapsis('elapsis', 'width', 25 * 60 * 1000);
     window.scrollFever = new ScrollFever();
-    return $('body').on('keydown keyup', function(event) {
+    return $('body').on('keydown', function(event) {
       var _ref;
       if ((_ref = event.keyCode) === 16) {
         return $('#elapsis, #scroll-fever').toggleClass('active');

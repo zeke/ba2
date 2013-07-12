@@ -24,8 +24,8 @@
   <li>
     <figure>
       <figcaption>
-        Think of Heroku as a web hosting company that doesn't suck. We provide a platform
-        that lets developers focus on apps instead of infrastructure. Developers are our market,
+        Heroku is a web hosting company that doesn't suck. We provide a platform
+        that lets developers focus on apps instead of infrastructure. Developers are our customers,
         and everything we do is about promoting developer happiness.
       </figcaption>
     </figure>
@@ -37,10 +37,8 @@
 
   <li>
     <figure>
-      <figcaption class="fullscreen">
-        In the early days, Ruby was Heroku&rsquo;s only supported language, but with the advent of the <a href="https://devcenter.heroku.com/articles/cedar">Cedar Stack</a> in 2011, Heroku became a <a href="https://blog.heroku.com/archives/2011/8/3/polyglot_platform">polyglot platform</a>,
-        giving users a hook into the deployment process and enabling them to run
-        apps in any language or framework.
+      <figcaption>
+        In the early days, Ruby was Heroku&rsquo;s only supported language, but in 2011 the <a href="https://devcenter.heroku.com/articles/cedar">Cedar Stack</a> was launched, making Heroku a true <a href="https://blog.heroku.com/archives/2011/8/3/polyglot_platform">polyglot platform</a>.
       </figcaption>
     </figure>
 
@@ -53,9 +51,25 @@
   <li>
     <figure>
       <figcaption class="fullscreen">
-        <a href="https://devcenter.heroku.com/articles/cedar">Cedar</a> is Heroku&rsquo;s general-purpose stack, with no native support for any language. Adding support for a language or framework is a matter of layering on a build-time adapter that can massage an app into an executable that can run on Cedar's runtime. We call this adapter a buildpack.
+        <a href="https://devcenter.heroku.com/articles/cedar">Cedar</a> is Heroku&rsquo;s general-purpose stack, with no native support for any language. New languages or frameworks are supported by creating new buildpacks.
       </figcaption>
     </figure>
+  </li>
+
+  <li>
+  <figure>
+    <figcaption>
+      There are currently <a href="https://devcenter.heroku.com/articles/buildpacks#default-buildpacks">nine official buildpacks</a>, offering support for Ruby, Node.js, Python, and various JVM languages.
+    </figcaption>
+  </figure>
+  </li>
+
+  <li>
+  <figure>
+    <figcaption>
+      And over <strong>1500</strong> third-party buildpacks are in use on the platform today.
+    </figcaption>
+  </figure>
   </li>
 
   <li class="titular">
@@ -73,8 +87,8 @@
   <li>
   <figure>
     <figcaption>
-      Heroku Buildpacks are open source. We strive to expose platform primitives wherever possible, giving
-      developers the freedom to bend the platform to fit their needs.
+      Heroku Buildpacks are open source. We like to expose platform primitives wherever possible, giving
+      developers the power to bend the platform to fit their needs.
     </figcaption>
   </figure>
   </li>
@@ -82,23 +96,7 @@
   <li>
   <figure>
     <figcaption>
-      There is no spoon.
-    </figcaption>
-  </figure>
-  </li>
-
-  <li>
-  <figure>
-    <figcaption>
-      There are currently <a href="https://devcenter.heroku.com/articles/buildpacks#default-buildpacks">nine official buildpacks</a>, offering support for Ruby, Node.js, Python, and various flavors of Java.
-    </figcaption>
-  </figure>
-  </li>
-
-  <li>
-  <figure>
-    <figcaption>
-      Over 1500 third-party buildpacks are in use on the platform today.
+      <a href="https://www.google.com/search?q=there%20is%20no%20spoon">There is no spoon.</a>
     </figcaption>
   </figure>
   </li>
@@ -143,9 +141,9 @@
   <li>
     <figure>
       <figcaption class="fullscreen">
-        The job of a product manager is to figure out what customers want and distill that
-        information into something actionable. One way to find out is to
-        obverve existing patterns in their behavior.
+        The roles of a product manager are many and varied, but the most important one
+        is to figure out what customers want and/or need, then distill that information
+        into something actionable by designers and engineers.
       </figcaption>
     </figure>
   </li>
@@ -156,10 +154,28 @@
     </figure>
   </li>
 
+<!--   <li>
+    <figure>
+      <figcaption>
+        &ldquo;The richest vein for tech startups is creating the product that you want to use: that’s what Steve and Woz did.&rdquo; -
+        <a href="http://blog.guykawasaki.com/2011/10/what-i-learned-from-steve-jobs.html">Guy Kawasaki</a>
+      </figcaption>
+    </figure>
+  </li> -->
+
   <li>
     <figure>
       <figcaption>
-        Maybe we can use GitHub to figure out what people are doing with all those forks.
+        Having a large community of open source contributors means we don't always have to ask what
+        our customers want. They're already building what they want.
+      </figcaption>
+    </figure>
+  </li>
+
+  <li>
+    <figure>
+      <figcaption>
+        So... maybe we can use GitHub to get a sense of what people are doing with all those forks.
       </figcaption>
     </figure>
   </li>
@@ -187,15 +203,15 @@
   <li>
     <figure>
       <figcaption>
-        <a href="https://github.com/defunkt/dotjs">dotjs</a> is a Google Chrome extension and local webrick webserver that serves up files in your `~/.js` directory. When you view foo.com in your browser, `~/.js/foo.com.js` is eval'd against the current page.
+        <a href="https://github.com/defunkt/dotjs">dotjs</a> is a Google Chrome extension and local webrick webserver that serves up files in your <code>~/.js</code> directory. When you view foo.com in your browser, <code>~/.js/foo.com.js</code> is eval'd against the current page.
       </figcaption>
     </figure>
   </li>
 
   <li>
     <figure>
-      <figcaption>
-        dotjs is Greasemonkey for introverts. It's great for quickly prototyping browser extensions and making small tweaks to sites, but there's no centralized registry of dotjs scripts, so you can't easily share or distribute your creations with others.
+      <figcaption class="fullscreen">
+        dotjs is like Greasemonkey for introverts. It's great for quickly prototyping browser extensions and making small tweaks to sites, but there's no centralized registry of dotjs scripts, so you can't easily share or distribute your creations with others.
       </figcaption>
     </figure>
   </li>
@@ -253,9 +269,32 @@
   </li>
 
   <li>
+    <figure>
+      <figcaption>
+        Writing extensions is fun. Let's make <a href="https://github.com/zeke/npm-hub">another one</a> for viewing npm dependencies of github repos!
+      </figcaption>
+      <img src="images/npm.svg">
+    </figure>
+  </li>
+
+  <li>
+    <figure>
+      <a href="https://github.com/zeke/npm-hub"><img src="images/npm-hub-screenshot.png" class="fullscreen"></a>
+    </figure>
+  </li>
+
+  <li>
+    <figure>
+      <figcaption>
+        I digress...
+      </figcaption>
+    </figure>
+  </li>
+
+  <li>
   <figure>
     <figcaption>
-      Forkie helps surfaces forks that are <em>theoretically</em> popular, but stargazer and
+      So, Forkie surfaces forks that are <em>theoretically</em> popular, but stargazer and
       fork counts are merely popularity proxies. Time to look at real usage...
     </figcaption>
   </figure>
@@ -276,7 +315,7 @@
   <li>
     <figure>
       <figcaption>
-        Each app's metadata, including buildpack URL, is stored in an <a href="https://postgres.heroku.com/blog/past/2012/3/14/introducing_keyvalue_data_storage_in_heroku_postgres/">hstore</a> column.
+        App metadata, including buildpack URL, is stored in an <a href="https://postgres.heroku.com/blog/past/2012/3/14/introducing_keyvalue_data_storage_in_heroku_postgres/">hstore</a> column.
       </figcaption>
     </figure>
   </li>
@@ -304,7 +343,7 @@
     </figure>
   </li> -->
 
-  <li class="titular">
+<!--   <li class="titular">
     <h1>Analysis Paralysis!</h1>
   </li>
 
@@ -312,31 +351,24 @@
     <figure>
       <a href="http://en.wikipedia.org/wiki/The_Fox_and_the_Cat_(fable)"><img src="images/cat-fox-hound.jpg" class="fullscreen"></a>
     </figure>
+  </li> -->
+
+  <li class="titular">
+    <h1>Buildpack Trends</h1>
   </li>
 
   <li>
     <figure>
-      <figcaption>
-        Customers cannot tell you what they need ...The richest vein for tech startups is creating the product that you want to use—that’s what Steve and Woz did.
-        <a href="http://blog.guykawasaki.com/2011/10/what-i-learned-from-steve-jobs.html">Guy Kawasaki</a>
+      <figcaption class="fullscreen">
+        Developers are doing all kinds of crazy stuff with buildpacks, but some definite patterns
+        seem to be emerging.
       </figcaption>
     </figure>
   </li>
 
   <li>
-    https://docs.google.com/a/heroku.com/document/d/1XlREDOyg-98VEtfw6Q5hs1RNvhEXkY7621PDVgqRTR8/edit
-    https://docs.google.com/a/heroku.com/document/d/1Unyib5AP_s6eNZqhEdvHxdYuE3SsmVuyJj815nyLQXA/edit
-    http://xseignard.github.io/2013/02/18/use-bower-with-heroku/
-    Rule of Modularity: build a program out of simple parts connected by well-defined interfaces.
-  </li>
-
-  <li class="titular">
-    <h1>What are people doing with buildpacks?</h1>
-  </li>
-
-  <li>
     <figure>
-      <figcaption>
+      <figcaption class="fullscreen">
         <h2>Build Tools</h2>
         <a href="https://github.com/mbuchetics/heroku-buildpack-nodejs-grunt">grunt</a>,
         <a href="https://github.com/centralway/heroku-buildpack-nodejs-bower">bower</a>, and
@@ -347,7 +379,7 @@
 
   <li>
     <figure>
-      <figcaption>
+      <figcaption class="fullscreen">
         <h2>Headless Browsers</h2>
         <a href="https://github.com/stomita/heroku-buildpack-phantomjs">PhantomJS</a> and
         <a href="https://github.com/leesei/heroku-buildpack-casperjs">Casper</a>.
@@ -357,7 +389,8 @@
 
   <li>
     <figure>
-      <figcaption>
+      <figcaption class="fullscreen">
+        <h2>Meteor</h2>
         <a href="https://github.com/oortcloud/heroku-buildpack-meteorite">Meteor</a>,
         <a href="https://github.com/jordansissel/heroku-buildpack-meteor">Meteor</a>,
         <a href="https://github.com/ondrej-kvasnovsky/heroku-buildpack-meteor">Meteor</a>,
@@ -370,8 +403,8 @@
 
   <li>
     <figure>
-      <figcaption>
-        Native dependencies like
+      <figcaption class="fullscreen">
+        <h2>Binary Dependencies</h2>
         <a href="https://github.com/mojodna/heroku-buildpack-nodejs#cairo">Cairo</a>,
         <a href="https://github.com/shunjikonishi/heroku-buildpack-ffmpeg">FFMpeg</a>,
         <a href="https://github.com/mrrad/heroku-buildpack-taglib">Taglib</a>,
@@ -383,8 +416,8 @@
 
   <li>
     <figure>
-      <figcaption>
-        Weird stuff like
+      <figcaption class="fullscreen">
+        <h2>Weird Stuff</h2>
         <a href="https://github.com/igrigorik/heroku-buildpack-dart">Dart</a> and
         <a href="https://github.com/ryandotsmith/null-buildpack">null-buildpack</a>.
       </figcaption>
@@ -393,42 +426,52 @@
 
   <li>
     <figure>
-      <figcaption>
-        Language promiscuity like
+      <figcaption class="fullscreen">
+        <h2>Language Promiscuity</h2>
         <a href="https://github.com/threadlife/heroku-buildpack-ruby-nodejs">ruby+node</a> and
         <a href="https://github.com/ayyar/heroku-buildpack-python-nodejs">python+node</a>.
       </figcaption>
     </figure>
   </li>
 
-
-
-  <li>
-    <h1>Buildpack proliferation is a double-edged sword..</h1>
-  </li>
-
   <li>
     <figure>
-      <figcaption>
-        It's good because hackers don't have to wait for Heroku to build the features they want.
+      <figcaption class="fullscreen">
+        <h2>Composability</h2>
+        <a href="https://github.com/ddollar/heroku-buildpack-multi">heroku-buildpack-multi</a>,
+        <a href="https://github.com/nasali/heroku-multi-buildpack">heroku-multi-buildpack</a>, and
+        <a href="https://github.com/memberful/heroku-buildpack-compose">heroku-buildpack-compose</a>.
       </figcaption>
     </figure>
-  </li>
-
-  <li>
-    <figure>
-      <figcaption>
-        It's bad because improvements to an official buildpack rarely propagate to its forks.
-      </figcaption>
-    </figure>
-  </li>
-
-  <li>
-    <h1>What's next?</h1>
   </li>
 
   <li class="titular">
-    <h1>Composability</h1>
+    <h1>What is Composability?</h1>
+  </li>
+
+  <li>
+    <figure>
+      <figcaption>
+        Composability is simply the ability to build useful systems out of smaller pieces.
+      </figcaption>
+    </figure>
+  </li>
+
+  <li>
+    <figure>
+      <figcaption>
+        <code>echo "foo" | pbcopy</code>
+      </figcaption>
+    </figure>
+  </li>
+
+  <li>
+    <figure>
+      <figcaption>
+        The Node community has been instrumental in reviving this important bit of Unix philoshopy, bringing it
+        into the consciousness of a new generation of hackers.
+      </figcaption>
+    </figure>
   </li>
 
   <li>
@@ -443,8 +486,20 @@
   <li>
     <figure>
       <figcaption>
-        Practice Machete Design.<br>
-        Create a single, general-purpose tool which is simple to understand but can be applied to many problems. It's like the product version of Occam's Razor. - <a href="https://gist.github.com/adamwiggins/5687294">Adam Wiggins</a>
+        &ldquo;Create a single, general-purpose tool which is simple to understand but can be applied to many problems. It's like the product version of Occam's Razor.&rdquo; -
+        <a href="https://gist.github.com/adamwiggins/5687294">Adam Wiggins</a>
+      </figcaption>
+    </figure>
+  </li>
+
+  <li class="titular">
+    <h1>So, What's Next?</h1>
+  </li>
+
+  <li>
+    <figure>
+      <figcaption>
+        Make the Node.js buildpack even smaller.
       </figcaption>
     </figure>
   </li>
@@ -452,7 +507,7 @@
   <li>
     <figure>
       <figcaption>
-        I suspect the most innovative composable buildpacks are lurking in <code>.buildpacks</code> files.
+        Look inside all the <code>.buildpacks</code> files, where the composability magic is really happening.
       </figcaption>
     </figure>
   </li>
@@ -460,10 +515,33 @@
   <li>
     <figure>
       <figcaption>
-        Hit me up on <a href="http://twitter.com/zeke">twitter</a> or in meatspace if you want to bike shed, drop science, design by committee, or wax philoshophical.
+         Keep listening to users.
       </figcaption>
     </figure>
-
   </li>
+
+  <li>
+    <figure>
+      <figcaption>
+         And keep on hacking!
+      </figcaption>
+    </figure>
+  </li>
+
+  <li>
+    <figure>
+      <img src="images/thats-all-forks.jpg" class="full-width">
+    </figure>
+  </li>
+
+  <li>
+    <figure>
+      <figcaption>
+        I'm <a href="http://twitter.com/zeke">zeke</a> on Twitter and <a href="http://github.com/zeke">zeke</a> on GitHub.
+        Hit me up if you want to paint bike sheds, drop science, design by committee, or wax philoshophical.
+      </figcaption>
+    </figure>
+  </li>
+
 
 </ol>

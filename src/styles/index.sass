@@ -84,6 +84,9 @@ ol#slides
         font-size: $mobile-heading-size
         padding: $mobile-slide-padding
 
+    h2
+      margin: 0
+
     &.titular
       background: $heading-color
       > h1
@@ -108,6 +111,11 @@ ol#slides
           +centered
           max-width: 100%
           max-height: 100%
+        &.full-width
+          +centered
+          max-height: none
+          max-width: 100%
+          height: auto
 
         +mobile-only
           +not-centered
@@ -119,6 +127,9 @@ ol#slides
         font-size: $desktop-text-size
         max-width: 50%
         +centered-left($desktop-slide-padding)
+        overflow: hidden
+        strong
+          color: darken($text-color, 20%)
         &.fullscreen
           max-width: 80%
         +mobile-only

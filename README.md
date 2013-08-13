@@ -1,8 +1,8 @@
-# Buildpack Adventure
+# Buildpack Adventure II
 
-A story about the Heroku Node.js Buildpack, presented at [GothamJS 2013](http://gothamjs.com/).
+A second telling of a tale about the Heroku Node.js Buildpack, presented at [BrazilJS 2013](http://braziljs.com.br/).
 
-[buildpack-adventure.herokuapp.com](http://buildpack-adventure.herokuapp.com)
+[buildpack-adventure-2.herokuapp.com](http://buildpack-adventure-2.herokuapp.com)
 
 ## Usage
 

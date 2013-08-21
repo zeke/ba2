@@ -19,6 +19,7 @@ $slide-num-label-color: #BBB
 $desktop-slide-padding: 30px
 $desktop-heading-size: 100px
 $desktop-text-size: 52px
+$desktop-code-size: 36px
 
 $mobile-slide-padding: 20px
 $mobile-heading-size: 32px
@@ -128,6 +129,7 @@ ol#slides
         max-width: 50%
         +centered-left($desktop-slide-padding)
         overflow: hidden
+        padding: 5px
         strong
           color: darken($text-color, 20%)
         &.fullscreen
@@ -142,6 +144,7 @@ ol#slides
           color: $code-color
           +code-font-stack
           font-weight: bold
+          font-size: $desktop-code-size
 
         a
           color: $link-color
@@ -149,7 +152,7 @@ ol#slides
           border-bottom: 5px solid $link-color
           &:hover
             color: $link-hover-color
-            text-decoration: underline
+            border-bottom-color: $link-hover-color
 
 $scroll-fever-height: 5px
 $scroll-fever-color: rgba($link-color, 0.5)

@@ -11,13 +11,13 @@ The most dangerous thought you can have as a creative person is to think you kno
 
   <li class="titular">
     <h1>Buildpack Adventure 2</h1>
-    <h2>Edição Brasileira</h2>
+    <!-- <h2>Edição Brasileira</h2> -->
   </li>
 
   <li>
     <figure>
       <figcaption>
-        This is <a href="http://zeke.sikelianos.com">one hacker</a>&rsquo;s quixotic journey through the magical open-source world of Heroku buildpacks.
+        This is <a href="http://zeke.sikelianos.com">one hacker</a>&rsquo;s quixotic journey through userland, where the open-source Heroku buildpacks roam.
       </figcaption>
     </figure>
   </li>
@@ -40,8 +40,8 @@ The most dangerous thought you can have as a creative person is to think you kno
 
   <li>
     <figure>
-      <figcaption>
-        Heroku is a <a href="https://blog.heroku.com/archives/2011/8/3/polyglot_platform">polyglot platform</a>, designed to support nearly any programming language.
+      <figcaption class="fullscreen">
+        Heroku is a <a href="https://blog.heroku.com/archives/2011/8/3/polyglot_platform">polyglot platform</a>, designed to support many programming languages.
       </figcaption>
     </figure>
   </li>
@@ -55,15 +55,23 @@ The most dangerous thought you can have as a creative person is to think you kno
   <li>
     <figure>
       <figcaption class="fullscreen">
-        <a href="https://devcenter.heroku.com/articles/cedar">Cedar</a> is Heroku&rsquo;s general-purpose Ubuntu stack, with no native support for any language. New languages are supported through the use of open-source buildpacks.
+        <a href="https://devcenter.heroku.com/articles/cedar">Cedar</a> is Heroku&rsquo;s language-agnostic Ubuntu stack. New languages and frameworks are supported on Cedar through the use of buildpacks.
       </figcaption>
     </figure>
   </li>
 
   <li>
   <figure>
+    <figcaption class="fullscreen">
+      A <a href="https://devcenter.heroku.com/articles/buildpacks">buildpack</a> is a collection of scripts that prepare your app for execution on the Heroku platform.
+    </figcaption>
+  </figure>
+  </li>
+
+  <li>
+  <figure>
     <figcaption>
-      Heroku maintains <a href="https://devcenter.heroku.com/articles/buildpacks#default-buildpacks">official buildpacks</a> for the likes of Ruby, Node.js, Python, Scala, and a few others.
+      Heroku maintains <a href="https://devcenter.heroku.com/articles/buildpacks#default-buildpacks">official buildpacks</a> for languages and frameworks like Ruby, Node.js, Python, Scala, and a few others.
     </figcaption>
   </figure>
   </li>
@@ -91,7 +99,7 @@ The most dangerous thought you can have as a creative person is to think you kno
   <li>
   <figure>
     <figcaption class="fullscreen">
-      A <a href="https://devcenter.heroku.com/articles/buildpacks">buildpack</a> is a collection of scripts that prepare your app for execution on the Heroku platform.
+      In its simplest form, a buildpack consists of two scripts: <code>detect</code> and <code>compile</code>. Let's look at some pseudocode...
     </figcaption>
   </figure>
   </li>
@@ -99,8 +107,34 @@ The most dangerous thought you can have as a creative person is to think you kno
   <li>
   <figure>
     <figcaption class="fullscreen">
-      detect
-      compile
+      <pre>
+      <code>
+#!/usr/bin/env bash
+# bin/detect build-dir
+
+if [ -f $1/package.json ]; then
+  echo "Node.js" && exit 0
+else
+  echo "no" && exit 1
+fi
+      </code>
+      </pre>
+    </figcaption>
+  </figure>
+  </li>
+
+  <li>
+  <figure>
+    <figcaption class="fullscreen">
+      <pre>
+      <code>
+#!/usr/bin/env bash
+# bin/compile build-dir cache-dir
+
+curl http://nodejs.org/dist/v0.10.15.tgz
+npm install --production
+      </code>
+      </pre>
     </figcaption>
   </figure>
   </li>
@@ -260,7 +294,7 @@ The most dangerous thought you can have as a creative person is to think you kno
     </figure>
   </li>
 
-  <li>
+<!--   <li>
     <figure>
       <figcaption>
         Crossrider provides a good baseline for writing extensions,
@@ -268,7 +302,7 @@ The most dangerous thought you can have as a creative person is to think you kno
         <a href="http://zeke.sikelianos.com/javascript/">Vanilla Javascript cheatsheet</a>.
       </figcaption>
     </figure>
-  </li>
+  </li> -->
 
   <li>
   <figure>
@@ -340,15 +374,6 @@ The most dangerous thought you can have as a creative person is to think you kno
 
   <li class="titular">
     <h1>Buildpack Trends</h1>
-  </li>
-
-  <li>
-    <figure>
-      <figcaption class="fullscreen">
-        Developers are doing all kinds of crazy stuff with buildpacks, but some definite patterns
-        seem to be emerging.
-      </figcaption>
-    </figure>
   </li>
 
   <li>
@@ -430,7 +455,7 @@ The most dangerous thought you can have as a creative person is to think you kno
     </figure>
   </li>
 
-  <li class="titular">
+<!--   <li class="titular">
     <h1>What is Composability?</h1>
   </li>
 
@@ -452,7 +477,7 @@ The most dangerous thought you can have as a creative person is to think you kno
 
   <li>
     <figure>
-      <figcaption>
+      <figcaption class="fullscreen">
         The Node community has been instrumental in reviving this important bit of Unix philoshopy, bringing it
         into the consciousness of a new generation of hackers.
       </figcaption>
@@ -462,66 +487,66 @@ The most dangerous thought you can have as a creative person is to think you kno
   <li>
     <figure>
       <figcaption>
-        &ldquo;by releasing small modules, you leave open the question of their larger utility. they may yet solve problems that you have not dreamt of&rdquo; -
+        &ldquo;By releasing small modules, you leave open the question of their larger utility. They may yet solve problems that you have not dreamt of&rdquo; -
         <a href="https://twitter.com/isntitvacant/status/339091631414317057">@isntitvacant</a>
       </figcaption>
     </figure>
-  </li>
+  </li> -->
 
-  <li>
+<!--   <li>
     <figure>
       <figcaption>
         &ldquo;Create a single, general-purpose tool which is simple to understand but can be applied to many problems. It's like the product version of Occam's Razor.&rdquo; -
         <a href="https://gist.github.com/adamwiggins/5687294">Adam Wiggins</a>
       </figcaption>
     </figure>
+  </li> -->
+
+  <li class="titular">
+    <h1>The Future</h1>
+  </li>
+
+  <li>
+    <figure>
+      <figcaption class="fullscreen">
+        The future looks bright, and userland is rife with creativity. There are over <strong>1500 third-party buildpacks</strong> in use on the platform today.
+      </figcaption>
+    </figure>
+  </li>
+
+  <li>
+    <figure>
+      <figcaption>
+        The official Node.js buildpack is going on a diet.
+      </figcaption>
+    </figure>
+  </li>
+
+  <li>
+    <figure>
+      <figcaption>
+        Composable buildpacks will soon become the default.
+      </figcaption>
+    </figure>
+  </li>
+
+  <li>
+    <figure>
+      <figcaption>
+        Node.js is now a first-class citizen at Heroku, and a top company priority.
+      </figcaption>
+    </figure>
   </li>
 
   <li class="titular">
-    <h1>So, What's Next?</h1>
+    <h1>
+      Fin.
+    </h1>
   </li>
 
   <li>
     <figure>
-      <figcaption>
-        Make the Node.js buildpack even smaller.
-      </figcaption>
-    </figure>
-  </li>
-
-  <li>
-    <figure>
-      <figcaption>
-        Look inside all the <code>.buildpacks</code> files, where the composability magic is really happening.
-      </figcaption>
-    </figure>
-  </li>
-
-  <li>
-    <figure>
-      <figcaption>
-         Keep listening to users.
-      </figcaption>
-    </figure>
-  </li>
-
-  <li>
-    <figure>
-      <figcaption>
-         And keep on hacking!
-      </figcaption>
-    </figure>
-  </li>
-
-<!--   <li>
-    <figure>
-      <img src="images/thats-all-forks.jpg" class="full-width">
-    </figure>
-  </li> -->
-
-  <li>
-    <figure>
-      <figcaption>
+      <figcaption class="fullscreen">
         I'm <a href="http://twitter.com/zeke">zeke</a> on Twitter and <a href="http://github.com/zeke">zeke</a> on GitHub.
         Hit me up if you want to paint bike sheds, drop science, design by committee, or wax philoshophical.
       </figcaption>

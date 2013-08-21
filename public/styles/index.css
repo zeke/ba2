@@ -1,65 +1,65 @@
-/* line 29, ../../src/styles/index.sass */
+/* line 30, ../../src/styles/index.sass */
 * { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 
-/* line 34, ../../src/styles/index.sass */
+/* line 35, ../../src/styles/index.sass */
 body { font-family: "Helvetica Neue", helvetica, arial; margin: 0; padding: 0; background: white; color: #777777; }
 
-/* line 41, ../../src/styles/index.sass */
+/* line 42, ../../src/styles/index.sass */
 h1, h2, h3, h4, h5, h6 { font-weight: bold; color: #543683; }
-/* line 44, ../../src/styles/index.sass */
+/* line 45, ../../src/styles/index.sass */
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a { text-decoration: none; color: #543683; }
 
-/* line 48, ../../src/styles/index.sass */
+/* line 49, ../../src/styles/index.sass */
 ol#slides { counter-reset: slideNum; margin: 0; padding: 0; list-style: none; }
-/* line 54, ../../src/styles/index.sass */
+/* line 55, ../../src/styles/index.sass */
 ol#slides > li { counter-increment: slideNum; margin: 0; padding: 0; height: 100%; width: 100%; position: relative; }
-@media (max-width: 480px) { /* line 54, ../../src/styles/index.sass */
+@media (max-width: 480px) { /* line 55, ../../src/styles/index.sass */
   ol#slides > li { width: auto; height: auto; } }
-/* line 66, ../../src/styles/index.sass */
+/* line 67, ../../src/styles/index.sass */
 ol#slides > li:after { content: counter(slideNum); position: absolute; top: 10px; right: 10px; display: "block"; font-size: 18px; color: #bbbbbb; display: none; }
-/* line 76, ../../src/styles/index.sass */
+/* line 77, ../../src/styles/index.sass */
 ol#slides > li > h1 { position: absolute; top: 50%; left: 0px; -webkit-transform: translate(0, -50%); transform: translate(0, -50%); max-width: 700px; font-size: 100px; margin: 0; padding: 0 0 0 30px; }
-@media (max-width: 480px) { /* line 76, ../../src/styles/index.sass */
+@media (max-width: 480px) { /* line 77, ../../src/styles/index.sass */
   ol#slides > li > h1 { position: relative; left: 0; top: 0; -webkit-transform: translate(0, 0); transform: translate(0, 0); font-size: 32px; padding: 20px; } }
-/* line 87, ../../src/styles/index.sass */
+/* line 88, ../../src/styles/index.sass */
 ol#slides > li h2 { margin: 0; }
-/* line 90, ../../src/styles/index.sass */
+/* line 91, ../../src/styles/index.sass */
 ol#slides > li.titular { background: #543683; }
-/* line 92, ../../src/styles/index.sass */
+/* line 93, ../../src/styles/index.sass */
 ol#slides > li.titular > h1 { color: white; }
-/* line 94, ../../src/styles/index.sass */
+/* line 95, ../../src/styles/index.sass */
 ol#slides > li.titular > h1 a { color: white; }
-/* line 97, ../../src/styles/index.sass */
+/* line 98, ../../src/styles/index.sass */
 ol#slides > li figure { width: 100%; height: 100%; margin: 0; padding: 0; }
-@media (max-width: 480px) { /* line 97, ../../src/styles/index.sass */
+@media (max-width: 480px) { /* line 98, ../../src/styles/index.sass */
   ol#slides > li figure { width: auto; height: auto; } }
-/* line 106, ../../src/styles/index.sass */
+/* line 107, ../../src/styles/index.sass */
 ol#slides > li figure img { position: absolute; top: 50%; right: 30px; -webkit-transform: translate(0, -50%); transform: translate(0, -50%); max-height: 80%; max-width: 50%; }
-/* line 110, ../../src/styles/index.sass */
+/* line 111, ../../src/styles/index.sass */
 ol#slides > li figure img.fullscreen { position: absolute; top: 50%; left: 50%; -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%); max-width: 100%; max-height: 100%; }
-/* line 114, ../../src/styles/index.sass */
+/* line 115, ../../src/styles/index.sass */
 ol#slides > li figure img.full-width { position: absolute; top: 50%; left: 50%; -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%); max-height: none; max-width: 100%; height: auto; }
-@media (max-width: 480px) { /* line 106, ../../src/styles/index.sass */
+@media (max-width: 480px) { /* line 107, ../../src/styles/index.sass */
   ol#slides > li figure img { position: relative; left: 0; top: 0; -webkit-transform: translate(0, 0); transform: translate(0, 0); max-width: 100%; max-height: 100%; } }
-/* line 124, ../../src/styles/index.sass */
-ol#slides > li figure figcaption { color: #777777; font-weight: bold; font-size: 52px; max-width: 50%; position: absolute; top: 50%; left: 30px; -webkit-transform: translate(0, -50%); transform: translate(0, -50%); overflow: hidden; }
-/* line 131, ../../src/styles/index.sass */
-ol#slides > li figure figcaption strong { color: #444444; }
+/* line 125, ../../src/styles/index.sass */
+ol#slides > li figure figcaption { color: #777777; font-weight: bold; font-size: 52px; max-width: 50%; position: absolute; top: 50%; left: 30px; -webkit-transform: translate(0, -50%); transform: translate(0, -50%); overflow: hidden; padding: 5px; }
 /* line 133, ../../src/styles/index.sass */
+ol#slides > li figure figcaption strong { color: #444444; }
+/* line 135, ../../src/styles/index.sass */
 ol#slides > li figure figcaption.fullscreen { max-width: 80%; }
-@media (max-width: 480px) { /* line 124, ../../src/styles/index.sass */
+@media (max-width: 480px) { /* line 125, ../../src/styles/index.sass */
   ol#slides > li figure figcaption { position: relative; left: 0; top: 0; -webkit-transform: translate(0, 0); transform: translate(0, 0); max-width: none; font-size: 18px; padding: 20px; } }
-/* line 141, ../../src/styles/index.sass */
-ol#slides > li figure figcaption code { color: black; font-family: Courier, monospace; font-weight: bold; }
-/* line 146, ../../src/styles/index.sass */
+/* line 143, ../../src/styles/index.sass */
+ol#slides > li figure figcaption code { color: black; font-family: Menlo, Monaco, Courier, monospace; font-weight: bold; font-size: 36px; }
+/* line 149, ../../src/styles/index.sass */
 ol#slides > li figure figcaption a { color: #543683; text-decoration: none; border-bottom: 5px solid #543683; }
-/* line 150, ../../src/styles/index.sass */
-ol#slides > li figure figcaption a:hover { color: #543683; text-decoration: underline; }
+/* line 153, ../../src/styles/index.sass */
+ol#slides > li figure figcaption a:hover { color: #543683; border-bottom-color: #543683; }
 
-/* line 160, ../../src/styles/index.sass */
+/* line 163, ../../src/styles/index.sass */
 #scroll-fever { position: fixed; top: 0; left: 0; width: 0; height: 5px; background: rgba(84, 54, 131, 0.5); }
 
-/* line 168, ../../src/styles/index.sass */
+/* line 171, ../../src/styles/index.sass */
 #elapsis { position: fixed; top: 5px; left: 0; width: 0; height: 5px; background: rgba(84, 54, 131, 0.3); opacity: 0; transition: all 1s; }
 /* line 56, ../../src/styles/_mixins.sass */
 #elapsis.active { opacity: 1; }

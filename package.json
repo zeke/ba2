@@ -2,7 +2,9 @@
   "name": "poesis",
   "version": "0.0.1",
   "dependencies": {
-    "express": "~3.3.3"
+    "express": "~3.3.3",
+    "carousel": "0.0.2",
+    "scroll-fever": "0.0.0"
   },
   "devDependencies": {
     "grunt": "~0.4.1",

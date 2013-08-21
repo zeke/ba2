@@ -2,7 +2,7 @@
 * { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 
 /* line 34, ../../src/styles/index.sass */
-body { font-family: "Helvetica Neue", helvetica, arial; margin: 0; padding: 0; background: white; color: #555555; }
+body { font-family: "Helvetica Neue", helvetica, arial; margin: 0; padding: 0; background: white; color: #777777; }
 
 /* line 41, ../../src/styles/index.sass */
 h1, h2, h3, h4, h5, h6 { font-weight: bold; color: #543683; }
@@ -42,9 +42,9 @@ ol#slides > li figure img.full-width { position: absolute; top: 50%; left: 50%; 
 @media (max-width: 480px) { /* line 106, ../../src/styles/index.sass */
   ol#slides > li figure img { position: relative; left: 0; top: 0; -webkit-transform: translate(0, 0); transform: translate(0, 0); max-width: 100%; max-height: 100%; } }
 /* line 124, ../../src/styles/index.sass */
-ol#slides > li figure figcaption { color: #555555; font-weight: bold; font-size: 52px; max-width: 50%; position: absolute; top: 50%; left: 30px; -webkit-transform: translate(0, -50%); transform: translate(0, -50%); overflow: hidden; }
+ol#slides > li figure figcaption { color: #777777; font-weight: bold; font-size: 52px; max-width: 50%; position: absolute; top: 50%; left: 30px; -webkit-transform: translate(0, -50%); transform: translate(0, -50%); overflow: hidden; }
 /* line 131, ../../src/styles/index.sass */
-ol#slides > li figure figcaption strong { color: #222222; }
+ol#slides > li figure figcaption strong { color: #444444; }
 /* line 133, ../../src/styles/index.sass */
 ol#slides > li figure figcaption.fullscreen { max-width: 80%; }
 @media (max-width: 480px) { /* line 124, ../../src/styles/index.sass */
@@ -52,16 +52,14 @@ ol#slides > li figure figcaption.fullscreen { max-width: 80%; }
 /* line 141, ../../src/styles/index.sass */
 ol#slides > li figure figcaption code { color: black; font-family: Courier, monospace; font-weight: bold; }
 /* line 146, ../../src/styles/index.sass */
-ol#slides > li figure figcaption a { color: #543683; text-decoration: underline; }
-/* line 149, ../../src/styles/index.sass */
+ol#slides > li figure figcaption a { color: #543683; text-decoration: none; border-bottom: 5px solid #543683; }
+/* line 150, ../../src/styles/index.sass */
 ol#slides > li figure figcaption a:hover { color: #543683; text-decoration: underline; }
 
-/* line 161, ../../src/styles/index.sass */
-#scroll-fever { position: fixed; top: 0; left: 0; width: 0; height: 5px; background: rgba(84, 54, 131, 0.5); opacity: 0; transition: all 1s; }
-/* line 56, ../../src/styles/_mixins.sass */
-#scroll-fever.active { opacity: 1; }
+/* line 160, ../../src/styles/index.sass */
+#scroll-fever { position: fixed; top: 0; left: 0; width: 0; height: 5px; background: rgba(84, 54, 131, 0.5); }
 
-/* line 170, ../../src/styles/index.sass */
+/* line 168, ../../src/styles/index.sass */
 #elapsis { position: fixed; top: 5px; left: 0; width: 0; height: 5px; background: rgba(84, 54, 131, 0.3); opacity: 0; transition: all 1s; }
 /* line 56, ../../src/styles/_mixins.sass */
 #elapsis.active { opacity: 1; }

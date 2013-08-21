@@ -29,8 +29,7 @@ The most dangerous thought you can have as a creative person is to think you kno
   <li>
     <figure>
       <figcaption>
-        Heroku is a web hosting company that doesn't suck. We provide a platform
-        that lets developers focus on apps rather than infrastructure.
+        Heroku is a web hosting company that doesn't suck. We help developers focus on apps rather than infrastructure.
       </figcaption>
     </figure>
   </li>
@@ -42,20 +41,21 @@ The most dangerous thought you can have as a creative person is to think you kno
   <li>
     <figure>
       <figcaption>
-        In the early days, Ruby was Heroku&rsquo;s only supported language, but in 2011 the <a href="https://devcenter.heroku.com/articles/cedar">Cedar Stack</a> was launched, making Heroku a true <a href="https://blog.heroku.com/archives/2011/8/3/polyglot_platform">polyglot platform</a>.
+        Heroku is a <a href="https://blog.heroku.com/archives/2011/8/3/polyglot_platform">polyglot platform</a>, designed to support nearly any programming language.
       </figcaption>
     </figure>
-
   </li>
 
-  <li class="titular">
-    <h1>What is Cedar?</h1>
+  <li>
+    <figure>
+      <img src="images/heroku-language-lineup.png" class="fullscreen">
+    </figure>
   </li>
 
   <li>
     <figure>
       <figcaption class="fullscreen">
-        <a href="https://devcenter.heroku.com/articles/cedar">Cedar</a> is Heroku&rsquo;s general-purpose stack, with no native support for any language. New languages or frameworks are supported by creating new buildpacks.
+        <a href="https://devcenter.heroku.com/articles/cedar">Cedar</a> is Heroku&rsquo;s general-purpose Ubuntu stack, with no native support for any language. New languages are supported through the use of open-source buildpacks.
       </figcaption>
     </figure>
   </li>
@@ -63,7 +63,7 @@ The most dangerous thought you can have as a creative person is to think you kno
   <li>
   <figure>
     <figcaption>
-      There are currently <a href="https://devcenter.heroku.com/articles/buildpacks#default-buildpacks">nine official buildpacks</a>, with support for Ruby, Node.js, Python, and various JVM languages.
+      Heroku maintains <a href="https://devcenter.heroku.com/articles/buildpacks#default-buildpacks">official buildpacks</a> for the likes of Ruby, Node.js, Python, Scala, and a few others.
     </figcaption>
   </figure>
   </li>
@@ -71,17 +71,17 @@ The most dangerous thought you can have as a creative person is to think you kno
   <li>
   <figure>
     <figcaption>
-      BUILDPACK DIAGRAM GOES HERE
+      When you push to Heroku, we detect your app's language and use the appropriate buildpack automatically.
     </figcaption>
   </figure>
   </li>
 
+  <!-- and over <strong>1500</strong> third-party buildpacks in use on the platform today. -->
+
   <li>
-  <figure>
-    <figcaption>
-      There are over <strong>1500</strong> third-party buildpacks in use on the platform today.
-    </figcaption>
-  </figure>
+    <figure>
+      <img src="images/heroku-buildpack-detection.png" class="fullscreen">
+    </figure>
   </li>
 
   <li class="titular">
@@ -91,15 +91,7 @@ The most dangerous thought you can have as a creative person is to think you kno
   <li>
   <figure>
     <figcaption class="fullscreen">
-      A <a href="https://devcenter.heroku.com/articles/buildpacks">buildpack</a> is simply a collection of scripts that prepare your app for execution on the Heroku platform. They're typically written in bash, but can be written in higher-level lanuages like ruby, python, or javascript.
-    </figcaption>
-  </figure>
-  </li>
-
-  <li>
-  <figure>
-    <figcaption>
-      Heroku Buildpacks are open source. Just like the Node world, we believe in a small core and a big userland.
+      A <a href="https://devcenter.heroku.com/articles/buildpacks">buildpack</a> is a collection of scripts that prepare your app for execution on the Heroku platform.
     </figcaption>
   </figure>
   </li>
@@ -107,30 +99,53 @@ The most dangerous thought you can have as a creative person is to think you kno
   <li>
   <figure>
     <figcaption class="fullscreen">
-      &ldquo;Creativity is for userland. We found creative solutions to all our showstopper problems so the last thing I want is creative experiments in core that may destabilize or impact performance.&rdquo;
+      detect
+      compile
     </figcaption>
   </figure>
   </li>
+
+  <li>
+  <figure>
+    <figcaption class="fullscreen">
+      Buildpacks are typically written in bash, but can be written in higher-level lanuages like ruby, python, or javascript.
+    </figcaption>
+  </figure>
+  </li>
+
+  <li>
+  <figure>
+    <figcaption class="fullscreen">
+      Heroku Buildpacks are open source. Like the Node.js maintainers, we believe that a <strong>small core</strong> and a <strong>big userland</strong> are essential to a prosperous community.
+    </figcaption>
+  </figure>
+  </li>
+
+  <li>
+    <figure>
+      <img src="images/small-core-big-userland.png" class="fullscreen">
+    </figure>
+  </li>
+
+<!--   <li>
+  <figure>
+    <figcaption class="fullscreen">
+      &ldquo;Creativity is for userland ... The last thing I want is creative experiments in core that may destabilize or impact performance.&rdquo;
+    </figcaption>
+  </figure>
+  </li> -->
 
   <li class="titular">
     <h1><a href="https://github.com/heroku/heroku-buildpack-nodejs">The Node.js Buildpack</a></h1>
   </li>
 
-  <li>
+<!--   <li>
     <figure>
       <figcaption>
         The Node.js buildpack was created by <a href="https://twitter.com/ddollar">David Dollar</a>, a prolific hacker known for such tools as <a href="https://github.com/ddollar/foreman">Foreman</a>, <a href="https://blog.heroku.com/archives/2013/6/27/heroku-fork">Heroku Fork</a>, <a href="https://github.com/ddollar/heroku-buildpack-multi">composable buildpacks</a> and a <a href="http://outlet.herokuapp.com/">grip of Heroku CLI plugins</a>.
       </figcaption>
     </figure>
-  </li>
-
-  <li>
-    <figure>
-      <figcaption class="fullscreen">
-        David is a busy man, building the Internets and whatnot. So I've stepped in to help maintain the Node builpack, dutifully adding support for new versions of Node.js and npm, merging pull requests, and handling support tickets.
-      </figcaption>
-    </figure>
-  </li>
+  </li> -->
 
   <li>
     <figure>
@@ -167,7 +182,7 @@ The most dangerous thought you can have as a creative person is to think you kno
 
   <li>
     <figure>
-      <figcaption>
+      <figcaption class="fullscreen">
         Having a large community of open source contributors means we don't always have to ask what
         our customers want. They're already building what they want in userland.
       </figcaption>
@@ -213,7 +228,7 @@ The most dangerous thought you can have as a creative person is to think you kno
   <li>
     <figure>
       <figcaption class="fullscreen">
-        dotjs is like Greasemonkey for introverts. It's great for quickly prototyping browser extensions and making small tweaks to sites, but there's no centralized registry of dotjs scripts, so you can't easily share or distribute your creations with others.
+        dotjs is like Greasemonkey for introverts: great for prototyping, but devoid of a real distribution mechanism.
       </figcaption>
     </figure>
   </li>
@@ -295,9 +310,9 @@ The most dangerous thought you can have as a creative person is to think you kno
 
   <li>
   <figure>
-    <figcaption>
-      So, Forkie surfaces forks that are <em>theoretically</em> popular, but stargazer and
-      fork counts are merely popularity proxies. Time to look at real usage...
+    <figcaption class="fullscreen">
+      Forkie helps to surface buildpacks that are <em>theoretically</em> popular, but stargazer and
+      fork counts are merely popularity proxies. Let's look at real usage data...
     </figcaption>
   </figure>
   </li>
@@ -309,15 +324,7 @@ The most dangerous thought you can have as a creative person is to think you kno
   <li>
     <figure>
       <figcaption>
-        Every time an app is deployed on Heroku, God creates a row in a Postgres table.
-      </figcaption>
-    </figure>
-  </li>
-
-  <li>
-    <figure>
-      <figcaption>
-        App metadata, including buildpack URL, is stored in an <a href="https://postgres.heroku.com/blog/past/2012/3/14/introducing_keyvalue_data_storage_in_heroku_postgres/">hstore</a> column.
+        Every time an app is deployed on Heroku, its buildpack URL is stored in an <a href="https://postgres.heroku.com/blog/past/2012/3/14/introducing_keyvalue_data_storage_in_heroku_postgres/">hstore</a> column of a postgres database.
       </figcaption>
     </figure>
   </li>
@@ -506,11 +513,11 @@ The most dangerous thought you can have as a creative person is to think you kno
     </figure>
   </li>
 
-  <li>
+<!--   <li>
     <figure>
       <img src="images/thats-all-forks.jpg" class="full-width">
     </figure>
-  </li>
+  </li> -->
 
   <li>
     <figure>
@@ -524,21 +531,9 @@ The most dangerous thought you can have as a creative person is to think you kno
   <li>
     <figure>
       <figcaption class="fullscreen">
-        <a href="http://buildpack-adventure.herokuapp.com/">buildpack-adventure.heroku.com</a>
+        <a href="http://buildpack-adventure-2.herokuapp.com/">buildpack-adventure-2.heroku.com</a>
       </figcaption>
     </figure>
   </li>
-
-  <li>
-    <figure>
-    </figure>
-  </li>
-
-  <li>
-    <figure>
-      <a href="http://jsforcats.com/"><img src="http://jsforcats.com/images/substack-cats.png" class="fullscreen"></a>
-    </figure>
-  </li>
-
 
 </ol>

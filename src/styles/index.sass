@@ -4,7 +4,7 @@
 // Colors
 
 $background-color: #FFF
-$text-color: #555
+$text-color: #777
 $heading-color: #543683
 $link-color: #543683
 $link-hover-color: $link-color
@@ -145,12 +145,11 @@ ol#slides
 
         a
           color: $link-color
-          text-decoration: underline
+          text-decoration: none
+          border-bottom: 5px solid $link-color
           &:hover
             color: $link-hover-color
             text-decoration: underline
-
-
 
 $scroll-fever-height: 5px
 $scroll-fever-color: rgba($link-color, 0.5)
@@ -165,7 +164,6 @@ $elapsis-color: rgba($link-color, 0.3)
   width: 0
   height: $scroll-fever-height
   background: $scroll-fever-color
-  +hidden-unless-active
 
 #elapsis
   position: fixed

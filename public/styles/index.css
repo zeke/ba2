@@ -53,13 +53,15 @@ ol#slides > li figure figcaption.fullscreen { max-width: 80%; }
 ol#slides > li figure figcaption code { color: black; font-family: Menlo, Monaco, Courier, monospace; font-weight: bold; font-size: 36px; }
 /* line 149, ../../src/styles/index.sass */
 ol#slides > li figure figcaption a { color: #543683; text-decoration: none; border-bottom: 5px solid #543683; }
-/* line 153, ../../src/styles/index.sass */
-ol#slides > li figure figcaption a:hover { color: #543683; border-bottom: 1px solid #543683; }
+@media (max-width: 480px) { /* line 149, ../../src/styles/index.sass */
+  ol#slides > li figure figcaption a { border-bottom: 1px solid #543683; } }
+/* line 155, ../../src/styles/index.sass */
+ol#slides > li figure figcaption a:hover { color: #543683; border-bottom-color: #543683; }
 
-/* line 163, ../../src/styles/index.sass */
+/* line 165, ../../src/styles/index.sass */
 #scroll-fever { position: fixed; top: 0; left: 0; width: 0; height: 5px; background: rgba(84, 54, 131, 0.5); }
 
-/* line 171, ../../src/styles/index.sass */
+/* line 173, ../../src/styles/index.sass */
 #elapsis { position: fixed; top: 5px; left: 0; width: 0; height: 5px; background: rgba(84, 54, 131, 0.3); opacity: 0; transition: all 1s; }
 /* line 56, ../../src/styles/_mixins.sass */
 #elapsis.active { opacity: 1; }

@@ -150,9 +150,11 @@ ol#slides
           color: $link-color
           text-decoration: none
           border-bottom: 5px solid $link-color
+          +mobile-only
+            border-bottom: 1px solid $link-color
           &:hover
             color: $link-hover-color
-            border-bottom: 1px solid $link-color
+            border-bottom-color: $link-hover-color
 
 $scroll-fever-height: 5px
 $scroll-fever-color: rgba($link-color, 0.5)

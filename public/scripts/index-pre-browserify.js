@@ -28,4 +28,10 @@
 
   window.carousel = new Carousel('#slides');
 
+  $(function() {
+    return $(window).resize(function() {
+      return $("h1, h2, figcaption, p").css("z-index", 1);
+    });
+  });
+
 }).call(this);

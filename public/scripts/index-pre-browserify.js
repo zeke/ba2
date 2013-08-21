@@ -29,9 +29,10 @@
   window.carousel = new Carousel('#slides');
 
   $(function() {
-    return $(window).resize(function() {
+    $(window).resize(function() {
       return $("h1, h2, figcaption, p").css("z-index", 1);
     });
+    return FastClick.attach(document.body);
   });
 
 }).call(this);
